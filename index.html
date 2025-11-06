@@ -27,6 +27,11 @@
             <a href="#">Education</a>
             <a href="#">Contact</a>
         </nav>
+    <!--
+        Header Section
+        Contains the main navigation and branding elements of the portfolio website.
+        Located at the top of the page.
+    -->
     </header>
     <section class="home">
         <div class="home-img">
@@ -35,7 +40,27 @@
         <div class="home-content">
             <h1>Hi its daniel</h1>
             <h3 class="typing-text">I'am <span></span></h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+            <div class="services">
+                <h2>My Services</h2>
+                <div class="services-container">
+                    <div class="service-card">
+                        <i class="fa-solid fa-code"></i>
+                        <h3>Web Development</h3>
+                        <p>Building responsive and modern websites using the latest technologies.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fa-solid fa-paint-brush"></i>
+                        <h3>UI/UX Design</h3>
+                        <p>Designing user-friendly interfaces with a focus on user experience and aesthetics.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fa-solid fa-mobile-alt"></i>
+                        <h3>Mobile App Development</h3>
+                        <p>Creating cross-platform mobile applications for Android and iOS devices.</p>
+                    </div>
+                </div>
+            </div>
+            
             <div class="social-icons">
                 <a href="#" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="#" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a>
@@ -46,6 +71,33 @@
             <a href="#" class="btn">Hire me</a>
         </div>
     </section>
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', function () {
+            navMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                navMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function (event) {
+            if (!event.target.closest('nav') && !event.target.closest('.menu-toggle')) {
+                navMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 
 </html>
