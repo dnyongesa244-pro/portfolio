@@ -328,7 +328,7 @@ span {
 
 @media (max-width: 995px) {
     .home {
-        flex-direction: column-reverse;
+        flex-direction: column;
         text-align: center;
         gap: 4rem;
         padding: 12rem 5% 5rem;
@@ -336,8 +336,11 @@ span {
     
     .home-content {
         max-width: 100%;
+        order: 2;
     }
-    
+    .home-img{
+        order: 1;
+    }
     .home-content h1 {
         font-size: 5rem;
     }
