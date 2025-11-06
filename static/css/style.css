@@ -71,6 +71,69 @@ nav a:hover, nav a.active{
         border-bottom: 3px solid rgb(15, 20, 14);
         border-bottom-right-radius: 2rem;
         background-color: black;
-        border
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    
+    }
+
+    nav:active{
+        display: block;
+    }
+
+    nav a{  
+        /* display: block; */
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover, nav a.active{
+        background-color: rgb(15, 20, 14);
+        padding: 1rem ;
+        border-radius: 0.5rem;
     }
 }
+
+secction{
+    min-height: 100vh;
+    padding:5rem 0 9% 5rem;
+}
+
+.home{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}  
+
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+
+span
+{
+    color: rgb(234, 250, 7);
+}
+
+
+.home-img{
+    border-radius: 50%;
+}
+
+.home-img img{
+    width: 32vw;
+    position: relative;
+    border-radius: 50%;
+
+   
+
+.home-img img{
+    width: 32vw;
+    position: relative;
+    border-radius: 50%;
+    box-shadow: 0 0  25px rgb(204, 214, 54);
+    cursor: pointer;
+    transition: 0.2s ease;
+}    
