@@ -1,26 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-html{
+html {
     font-size: 62.5%;
 }
 
-body{
-    background-color:black;
+body {
+    background-color: black;
     width: 100%;
     height: 100vh;
     overflow-x: hidden;
     color: wheat;
 }
 
-header{
-    margin-top: 20px ;
+header {
+    margin-top: 20px;
     position: fixed;
     top: 0;
     left: 0;
@@ -34,19 +34,19 @@ header{
     z-index: 100;
 }
 
-.logo{
-   font-size: 3rem;
-   color: palevioletred ;
-   font-weight: 800;
-   cursor: pointer;
-   transition: 0.5s ease;
+.logo {
+    font-size: 3rem;
+    color: palevioletred;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
 }
 
-.logo:hover{
+.logo:hover {
     transform: scale(1.1);
 }
 
-nav a{
+nav a {
     font-size: 1.8rem;
     color: rgb(240, 6, 170);
     margin-left: 1.8rem;
@@ -56,84 +56,199 @@ nav a{
     text-decoration: none;
 }
 
-nav a:hover, nav a.active{
+nav a:hover,
+nav a.active {
     color: rgb(234, 250, 7);
     border-bottom: 3px solid rgb(27, 248, 7);
 }
 
-@media(max-width:995px){
-    nav{
+@media(max-width:995px) {
+    nav {
         position: absolute;
-        top : 100%;
+        display: none;
+        top: 0;
         left: 0;
-        width : 40%;
+        width: 40%;
         border-left: 3px solid rgb(15, 20, 14);
         border-bottom: 3px solid rgb(15, 20, 14);
         border-bottom-right-radius: 2rem;
         background-color: black;
         border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
-    
+
     }
 
-    nav:active{
+    nav:active {
         display: block;
     }
 
-    nav a{  
+    nav a {
         /* display: block; */
         font-size: 2rem;
         margin: 3rem 0;
     }
 
-    nav a:hover, nav a.active{
+    nav a:hover,
+    nav a.active {
         background-color: rgb(15, 20, 14);
-        padding: 1rem ;
+        padding: 1rem;
         border-radius: 0.5rem;
     }
 }
 
-secction{
+secction {
     min-height: 100vh;
-    padding:5rem 0 9% 5rem;
+    padding: 5rem 0 9% 5rem;
 }
 
-.home{
-    display : flex;
+.home {
+    display: flex;
     justify-content: center;
     align-items: center;
     gap: 8rem;
     background-color: black;
-}  
+}
 
-.home .home-content h1{
+.home .home-content h1 {
     font-size: 6rem;
     font-weight: 700;
     line-height: 1.2;
 }
 
 
-span
-{
+span {
     color: rgb(234, 250, 7);
 }
 
 
-.home-img{
+.home-img {
     border-radius: 50%;
 }
 
-.home-img img{
+.home-img img {
     width: 32vw;
     position: relative;
     border-radius: 50%;
 
-   
+}
 
-.home-img img{
+.home-img img {
     width: 32vw;
     position: relative;
     border-radius: 50%;
-    box-shadow: 0 0  25px rgb(204, 214, 54);
+    box-shadow: 0 0 25px rgb(204, 214, 54);
     cursor: pointer;
     transition: 0.2s ease;
-}    
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid rgb(7, 242, 250);
+    margin: 3ren 1.5rem 3rem;
+    transform: 3s ease;
+    border-radius: 25%;
+
+
+}
+
+.social-icons a:hover {
+    background-color: rgb(7, 242, 250);
+    box-shadow: 0 0 20px rgb(7, 242, 250);
+    transform: scale(1.1);
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: blueviolet;
+    border-radius: 4rem;
+    color: chocolate;
+    font-weight: 600;
+    border: 2px solid chocolate;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale3d(1.03);
+    background-color: chocolate;
+    color: blueviolet;
+    box-shadow: 0 0 25px chocolate;
+    transform: scale(1.1);
+}
+
+.typing-text {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span {
+    position: relative;
+}
+
+.typing-text span::before {
+    content: software Developer;
+    color: #3206f5;
+    animation: words 20s infinite;
+
+}
+
+.typing-text span::after {
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8px;
+    animation: cursor 0.7s infinite;
+}
+
+
+@keyframes cursor {
+    to{
+        border-left: 3px solid transparent;
+    }
+}
+
+@keyframes words {
+    0%,20%{
+        content: "Software Developer";
+    }
+    21%,40%{
+        content: "Flutter Developer";
+    }
+    41%,60%{
+        content: "Web Developer";
+    }
+    61%,80%{
+        content: "Database Administrator";
+    }
+    81%,100%{
+        content: "Machine Learning Enthusiast";
+    }
+}
+
+@media(max-width:995px){
+    .home{
+        flex-direction: column;
+         margin: 4rem;
+    }
+   .home .home-content h3{
+        font-size: 2.5rem;
+   }
+    .home-content h1{
+          font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 70vw;
+    }   
+
+}
