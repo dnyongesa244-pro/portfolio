@@ -1,0 +1,210 @@
+
+        /* Custom styles that work with Bootstrap */
+        :root {
+            --primary: #6366f1;
+            --secondary: #f59e0b;
+            --accent: #10b981;
+            --dark: #0f172a;
+            --light: #f8fafc;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark);
+            color: var(--light);
+        }
+
+        /* Custom navbar styling */
+        .navbar-custom {
+            background: rgba(15, 23, 42, 0.95) !important;
+            backdrop-filter: blur(20px);
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-link {
+            color: #cbd5e1 !important;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #f59e0b !important;
+        }
+
+        /* Hero section with Bootstrap grid */
+        .hero-section {
+            padding: 120px 0 80px;
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.03), rgba(99, 102, 241, 0.02));
+        }
+
+        .profile-img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 50%;
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+        }
+
+        .typing-text {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--secondary);
+        }
+
+        /* Service cards with Bootstrap styling */
+        .service-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(99, 102, 241, 0.2);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        /* Skills section */
+        .skill-category {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .skill-category h3 {
+            color: var(--secondary);
+            font-size: 1.3rem;
+        }
+
+        .skill-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .skill-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .skill-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Social icons */
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            color: #cbd5e1;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        /* Custom button */
+        .btn-custom {
+            background: linear-gradient(135deg, var(--primary), #8b5cf6);
+            border: none;
+            color: white;
+            font-weight: 600;
+            padding: 12px 30px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+            color: white;
+        }
+
+        /* Section spacing */
+        .section {
+            padding: 80px 0;
+        }
+
+        /* Typing animation */
+        .typing-text span {
+            position: relative;
+        }
+
+        .typing-text span::before {
+            content: "Software Developer";
+            color: var(--primary);
+            animation: words 20s infinite;
+        }
+
+        .typing-text span::after {
+            content: "";
+            position: absolute;
+            width: calc(100% + 8px);
+            height: 100%;
+            border-left: 3px solid var(--primary);
+            right: -8px;
+            background: var(--dark);
+            animation: cursor 0.7s infinite, typing 20s steps(15) infinite;
+        }
+
+        @keyframes cursor {
+            to {
+                border-left: 3px solid transparent;
+            }
+        }
+
+        @keyframes words {
+
+            0%,
+            20% {
+                content: "Software Developer";
+            }
+
+            21%,
+            40% {
+                content: "Web Developer";
+            }
+
+            41%,
+            60% {
+                content: "UI/UX Designer";
+            }
+
+            61%,
+            80% {
+                content: "Mobile App Developer";
+            }
+
+            81%,
+            100% {
+                content: "Problem Solver";
+            }
+        }
