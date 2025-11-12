@@ -50,15 +50,20 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <h1 class="display-4 fw-bold mb-4">Hi, I'm Daniel</h1>
-                    <h3 class="typing-text mb-4">I'm a <span></span></h3>
+                    <h3 class="typing-text mb-4">I'm a <span id="word"></span></h3>
                     <p class="lead mb-4">Passionate developer creating digital solutions with modern technologies and
                         user-centered design.</p>
                     <div class="social-icons mb-4">
-                        <a href="https://www.linkedin.com/in/dnyongesa244" class="me-3" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/dnyongesa244" class="me-3" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://www.facebook.com/dnyongesa244" class="me-3" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/dnyongesa244" class="me-3" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://twitter.com/dnyongesa244" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/dnyongesa244" class="me-3" aria-label="LinkedIn"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/dnyongesa244" class="me-3" aria-label="GitHub"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://www.facebook.com/dnyongesa244" class="me-3" aria-label="Facebook"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/dnyongesa244" class="me-3" aria-label="Instagram"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/dnyongesa244" aria-label="Twitter"><i
+                                class="fab fa-twitter"></i></a>
                     </div>
                     <!-- <a href="#" class="btn btn-custom btn-lg">Hire Me</a> -->
                 </div>
@@ -246,6 +251,25 @@
     <script>
         // You can keep your existing JavaScript or modify as needed
         // Bootstrap handles the navbar toggle automatically
+    </script>
+    <script>
+        const words = [
+            "Software Developer",
+            "Web Developer",
+            "UI/UX Designer",
+            "Mobile App Developer",
+            "Problem Solver"
+        ];
+        let i = 0;
+        const wordEl = document.getElementById("word");
+
+        function changeWord() {
+            wordEl.textContent = words[i];
+            i = (i + 1) % words.length;
+        }
+
+        changeWord(); // initial
+        setInterval(changeWord, 2000); // change every 2 seconds
     </script>
 </body>
 
